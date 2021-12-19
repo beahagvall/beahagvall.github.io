@@ -1,7 +1,8 @@
 body {
      background-color: #222;
      font-family: "Work Sans", sans-serif;
-     font-weight: 300;
+     font-weight: 400;
+     margin:  0;
 }
 
 h1 {
@@ -63,11 +64,38 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 80px;
+    margin-left: 55px;
     padding-top: 25px;
+
+    position: relative;
 }
 
 nav a {
     color: #3da68d;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #fff;
+
+}
+
+nav a::before {
+    content:"";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease 220ms;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
